@@ -88,14 +88,14 @@ We model a baseline **18.0 bps (0.18%) round-trip transaction friction** coverin
 
 ```text
 hack_mcx/
-├── mcx_scraper.py             # Phase 1 & 2: Chrome TLS-impersonated MCX Bhavcopy scraper, date validator & checkpoint engine
-├── analytics_engine.py        # Phase 3 & 4: Curve interpolation, roll-down decomposition & t-1 shifted Z-score engine
-├── backtest_engine.py         # Phase 5: Expiry-isolated lifecycle backtester with 3 execution modes & Indian fee attribution
-├── app.py                     # Phase 6: 7-tab interactive Streamlit intelligence & judge verification dashboard
-├── mcx_gold_2years.csv        # Cleaned 2-year dataset (9,616 rows across 514 trading days, Oct 2024 – Oct 2026)
-├── mcx_gold_signals.csv       # Enriched 46-column relative-value & walk-forward signal dataset (2,608 contract-day pairs)
-├── mcx_backtest_results.csv   # Chronologically sorted trade execution log with gross/net PnL and OOS flags
-└── README.md                  # Project documentation
+├── mcx_scraper.py             
+├── analytics_engine.py        
+├── backtest_engine.py         
+├── app.py                     
+├── mcx_gold_2years.csv        
+├── mcx_gold_signals.csv       
+├── mcx_backtest_results.csv   
+└── README.md                  
 ```
 
 ---
