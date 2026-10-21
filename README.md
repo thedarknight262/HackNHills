@@ -1,4 +1,4 @@
-# 🪙 Commodity Derivatives Intelligence — MCX Gold Futures
+#  Commodity Derivatives Intelligence — MCX Gold Futures
 **Hack in Hills ’26 | Problem Statement 03: Commodity Derivatives Intelligence**
 
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
@@ -10,7 +10,7 @@ An institutional-grade relative-value analytics, term-structure interpolation, a
 
 ---
 
-## 📌 1. Executive Summary & Problem Statement
+##  1. Executive Summary & Problem Statement
 
 MCX lists four distinct futures contracts tied to the same underlying physical metal (Gold). However, their raw exchange prices cannot be compared directly due to three structural differences:
 1. **Heterogeneous Quotation Units & Lot Sizes:** Quoted per 10g (`GOLDM`, `GOLDTEN`), 8g (`GOLDGUINEA`), or 1g (`GOLDPETAL`), with trading units ranging from 1g to 100g.
@@ -21,7 +21,7 @@ This project builds a complete pipeline from raw MCX Bhavcopy ingestion to a 7-t
 
 ---
 
-## ⚖️ 2. Contract Specifications & Price Normalization
+##  2. Contract Specifications & Price Normalization
 
 | Contract Symbol | Trading Unit (1 Lot) | Price Quote Basis | Listed Purity | Expiry Window | History in Dataset |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -44,7 +44,7 @@ Because contract lot sizes differ in physical weight, spread execution requires 
 
 ---
 
-## 🔬 3. Key Empirical Findings (Oct 2024 – Oct 2026 | 514 Trading Days)
+##  3. Key Empirical Findings (Oct 2024 – Oct 2026 | 514 Trading Days)
 
 ### Finding 1: Persistent Retail Micro-Contract Markup
 Across **2,030 matched same-expiry contract-days**, retail micro-contracts systematically trade at a structural premium over institutional benchmarks:
@@ -84,7 +84,7 @@ We model a baseline **18.0 bps (0.18%) round-trip transaction friction** coverin
 
 ---
 
-## 🏗️ 4. Repository Architecture
+##  4. Repository Architecture
 
 ```text
 hack_mcx/
@@ -100,20 +100,20 @@ hack_mcx/
 
 ---
 
-## 🖥️ 5. Interactive Dashboard Walkthrough (`app.py`)
+##  5. Interactive Dashboard Walkthrough (`app.py`)
 
 The Streamlit application is organized into **7 specialized tabs**:
-1. **📊 Market & Gate Scanner:** Displays the latest exchange Bhavcopy status alongside a **Live 3-Gate Explainable Decision Audit** (`|Z| >= 2.0`, `Edge >= Cost Hurdle`, and `Liquidity/DTE Gate`), showing exactly how the system prevented false-alarm trades on `20 Oct 2026`.
-2. **📈 Term Structure & Carry:** Plots cross-contract futures curves by `Days_To_Expiry` and decomposes the `GOLDPETAL` vs. `GOLDM` spread into **Mechanical Maturity Carry Wedge** vs. **Genuine Curve-Adjusted Basis**.
-3. **🎯 Z-Score & OU Half-Life:** Visualizes the 15-day `t-1` shifted rolling mean, $\pm 2\sigma$ quiet zone (~93% quiet discipline), and the **Ornstein-Uhlenbeck Half-Life & Dickey-Fuller Stationarity Table**.
-4. **🧪 Walk-Forward & Bootstrap:** Compares **Gross vs. Net Cumulative Equity Curves**, **Underwater Drawdown Profiles**, **1,000-Iteration Monte Carlo Bootstrap Distributions**, and the **In-Sample (Oct 2024–Oct 2025) vs. Out-of-Sample (Oct 2025–Oct 2026) Validation Split**.
-5. **🗓️ Lifecycle, OI & Sizing:** Maps median **Volume** and **Open Interest** across `Days_To_Expiry` buckets (explaining why entries are blocked in the `< 5 DTE` tender zone) and includes an interactive **Gram-Neutral Lot & SPAN Margin Calculator**.
-6. **🔥 Cost Matrix & Attribution:** Runs a **25-backtest Sensitivity Heatmap** (`5 Hurdles × 5 Cost Regimes`), a **Cross-Pair Master Matrix**, and a **PnL Attribution Waterfall Bridge**.
-7. **🛡️ Judge Verification Suite:** Executes 5 live mathematical assertions directly on the dataset to verify zero data hygiene or look-ahead violations.
+1. ** Market & Gate Scanner:** Displays the latest exchange Bhavcopy status alongside a **Live 3-Gate Explainable Decision Audit** (`|Z| >= 2.0`, `Edge >= Cost Hurdle`, and `Liquidity/DTE Gate`), showing exactly how the system prevented false-alarm trades on `20 Oct 2026`.
+2. ** Term Structure & Carry:** Plots cross-contract futures curves by `Days_To_Expiry` and decomposes the `GOLDPETAL` vs. `GOLDM` spread into **Mechanical Maturity Carry Wedge** vs. **Genuine Curve-Adjusted Basis**.
+3. ** Z-Score & OU Half-Life:** Visualizes the 15-day `t-1` shifted rolling mean, $\pm 2\sigma$ quiet zone (~93% quiet discipline), and the **Ornstein-Uhlenbeck Half-Life & Dickey-Fuller Stationarity Table**.
+4. ** Walk-Forward & Bootstrap:** Compares **Gross vs. Net Cumulative Equity Curves**, **Underwater Drawdown Profiles**, **1,000-Iteration Monte Carlo Bootstrap Distributions**, and the **In-Sample (Oct 2024–Oct 2025) vs. Out-of-Sample (Oct 2025–Oct 2026) Validation Split**.
+5. ** Lifecycle, OI & Sizing:** Maps median **Volume** and **Open Interest** across `Days_To_Expiry` buckets (explaining why entries are blocked in the `< 5 DTE` tender zone) and includes an interactive **Gram-Neutral Lot & SPAN Margin Calculator**.
+6. ** Cost Matrix & Attribution:** Runs a **25-backtest Sensitivity Heatmap** (`5 Hurdles × 5 Cost Regimes`), a **Cross-Pair Master Matrix**, and a **PnL Attribution Waterfall Bridge**.
+7. ** Judge Verification Suite:** Executes 5 live mathematical assertions directly on the dataset to verify zero data hygiene or look-ahead violations.
 
 ---
 
-## 🛡️ 6. Automated 5-Point Verification Suite
+##  6. Automated 5-Point Verification Suite
 
 Tab 7 of the dashboard executes five live unit tests on the CSV files:
 * **Test 1 — Holiday Fallback & Duplicate Filter:** Confirms `0` duplicate `(Symbol, Date, Expiry)` records and `0` weekend fallback rows across all 9,616 rows.
@@ -124,7 +124,7 @@ Tab 7 of the dashboard executes five live unit tests on the CSV files:
 
 ---
 
-## 🚀 7. Installation & Quickstart
+##  7. Installation & Quickstart
 
 ### Prerequisites
 Install Python 3.9+ and the required packages:
