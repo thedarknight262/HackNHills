@@ -103,13 +103,13 @@ hack_mcx/
 ##  5. Interactive Dashboard Walkthrough (`app.py`)
 
 The Streamlit application is organized into **7 specialized tabs**:
-1. ** Market & Gate Scanner:** Displays the latest exchange Bhavcopy status alongside a **Live 3-Gate Explainable Decision Audit** (`|Z| >= 2.0`, `Edge >= Cost Hurdle`, and `Liquidity/DTE Gate`), showing exactly how the system prevented false-alarm trades on `20 Oct 2026`.
-2. ** Term Structure & Carry:** Plots cross-contract futures curves by `Days_To_Expiry` and decomposes the `GOLDPETAL` vs. `GOLDM` spread into **Mechanical Maturity Carry Wedge** vs. **Genuine Curve-Adjusted Basis**.
-3. ** Z-Score & OU Half-Life:** Visualizes the 15-day `t-1` shifted rolling mean, $\pm 2\sigma$ quiet zone (~93% quiet discipline), and the **Ornstein-Uhlenbeck Half-Life & Dickey-Fuller Stationarity Table**.
-4. ** Walk-Forward & Bootstrap:** Compares **Gross vs. Net Cumulative Equity Curves**, **Underwater Drawdown Profiles**, **1,000-Iteration Monte Carlo Bootstrap Distributions**, and the **In-Sample (Oct 2024–Oct 2025) vs. Out-of-Sample (Oct 2025–Oct 2026) Validation Split**.
-5. ** Lifecycle, OI & Sizing:** Maps median **Volume** and **Open Interest** across `Days_To_Expiry` buckets (explaining why entries are blocked in the `< 5 DTE` tender zone) and includes an interactive **Gram-Neutral Lot & SPAN Margin Calculator**.
-6. ** Cost Matrix & Attribution:** Runs a **25-backtest Sensitivity Heatmap** (`5 Hurdles × 5 Cost Regimes`), a **Cross-Pair Master Matrix**, and a **PnL Attribution Waterfall Bridge**.
-7. ** Judge Verification Suite:** Executes 5 live mathematical assertions directly on the dataset to verify zero data hygiene or look-ahead violations.
+1. **Market & Gate Scanner:** Displays the latest exchange Bhavcopy status alongside a **Live 3-Gate Explainable Decision Audit** (`|Z| >= 2.0`, `Edge >= Cost Hurdle`, and `Liquidity/DTE Gate`), showing exactly how the system prevented false-alarm trades on `20 Oct 2026`.
+2. **Term Structure & Carry:** Plots cross-contract futures curves by `Days_To_Expiry` and decomposes the `GOLDPETAL` vs. `GOLDM` spread into **Mechanical Maturity Carry Wedge** vs. **Genuine Curve-Adjusted Basis**.
+3. **Z-Score & OU Half-Life:** Visualizes the 15-day `t-1` shifted rolling mean, $\pm 2\sigma$ quiet zone (~93% quiet discipline), and the **Ornstein-Uhlenbeck Half-Life & Dickey-Fuller Stationarity Table**.
+4. **Walk-Forward & Bootstrap:** Compares **Gross vs. Net Cumulative Equity Curves**, **Underwater Drawdown Profiles**, **1,000-Iteration Monte Carlo Bootstrap Distributions**, and the **In-Sample (Oct 2024–Oct 2025) vs. Out-of-Sample (Oct 2025–Oct 2026) Validation Split**.
+5. **Lifecycle, OI & Sizing:** Maps median **Volume** and **Open Interest** across `Days_To_Expiry` buckets (explaining why entries are blocked in the `< 5 DTE` tender zone) and includes an interactive **Gram-Neutral Lot & SPAN Margin Calculator**.
+6. **Cost Matrix & Attribution:** Runs a **25-backtest Sensitivity Heatmap** (`5 Hurdles × 5 Cost Regimes`), a **Cross-Pair Master Matrix**, and a **PnL Attribution Waterfall Bridge**.
+7. **Judge Verification Suite:** Executes 5 live mathematical assertions directly on the dataset to verify zero data hygiene or look-ahead violations.
 
 ---
 
